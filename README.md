@@ -4,7 +4,7 @@ A mock taxi app that uses a min heap and red-black tree to keep track of rides. 
 ### Print(rideNumber)
 It uses the redBlack tree to search by ride number in O(log n). The space requirement for print is O(1).
 
-###(rideNumber1, rideNumber2)
+### Print(rideNumber1, rideNumber2)
 Uses the binary search tree property of the red-black tree to implement a recursive function that will add the rides with ride numbers between the 2 ride numbers into a list. The function runs in O(log(n) + m) where m is the number of matching nodes. The function recursively iterates the left sub-tree if the current node is greater than the range start given by ride number 1. Similarly, it iterates the right subtree only if the current node is less than the range end given by rideNumber2. This makes sure that only the nodes which are in the range will be visited, except for at most 2 nodes - one node below the range and one node above the range. The space complexity of this operation is O(m) used to store the rides that match this range criterion.
 
 ### Insert(rideNumber, rideCost, rideDuration) 
